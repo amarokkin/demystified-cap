@@ -1,6 +1,6 @@
 # Demystified CAP
 
-This mini-lab demonstrates an interpretation of CAP in that we can't have consistency and accuracy during a partition. This is demonstrated by having:
+This mini-lab demonstrates an interpretation of CAP in that we can't have consistency and availability during a partition. This is demonstrated by having:
 
 ## About the Lab
 1) Two AWS EC2 instances that each imitate a "database". This is done by containing a variable that can be set and get.
