@@ -9,10 +9,10 @@ This mini-lab demonstrates an interpretation of CAP in that we can't have consis
 4) Creating a socket connection between EC2-Reliable and EC2-Failure. EC2-Reliable attempts to set the variable on EC2-Failure. It only succeeds sometimes. This is implemented by adding a delay when setting the variable on EC2-Failure to demonstrate that the connection can't be made immediately.
 
 ## High Availability
-This lab demonstrates high availability (HA) when you run it because the results from getting the variable on EC2-Reliable and EC2-Failure return immediately, but the results are different in that the set order is set(*high*), set(*available*). EC2-Reliable returns *available*, as it should, while EC2-Failure returns *high*. This is because EC2-Failure didn't get updated before returning it's value after a partition.
+This lab demonstrates high availability (HA) when you run it because the results from getting the variable on EC2-Reliable and EC2-Failure return immediately, but the results are different in that the set order is set(**high**), set(**available**). EC2-Reliable returns **available**, as it should, while EC2-Failure returns **high**. This is because EC2-Failure didn't get updated before returning it's value after a partition.
 
 ## High Consistency
-This lab demonstrates high consistency (HC) when you run it because the results from getting the variable on EC2-Reliable and EC2-Failure match up, but it takes some time to get the results. In this example, we set(*high*), set(*consistency*) and both EC2-Reliable and EC2-Failure return *consistency* after a partition.
+This lab demonstrates high consistency (HC) when you run it because the results from getting the variable on EC2-Reliable and EC2-Failure match up, but it takes some time to get the results. In this example, we set(**high**), set(**consistency**) and both EC2-Reliable and EC2-Failure return **consistency** after a partition.
 
 ## If you wish to run this on your own
 1) Start up two AWS EC2 instances
@@ -24,4 +24,4 @@ This lab demonstrates high consistency (HC) when you run it because the results 
 7) Add ec2-failure.py to your EC2-Failure machine - scp -i {path_to_.pem_file} {path_to_ec2-failure.py}:~
 8) Run the python files on both your EC2-Reliable and EC2-Failure machines
 9) Run the client.py file on your local machine
-10) *MAKE SURE TO CLOSE YOUR EC2 INSTANCES TO AVOID CHARGES*
+10) **MAKE SURE TO CLOSE YOUR EC2 INSTANCES TO AVOID CHARGES**
